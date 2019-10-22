@@ -2,13 +2,13 @@ package de.karasuma.discordbot.conannews;
 
 import de.karasuma.discordbot.conannews.commandhandling.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 public class CommandWiki implements Command {
 	
@@ -55,32 +55,22 @@ public class CommandWiki implements Command {
 	}
 
 	private String searchForIDInWebsite(String[] urls) {
-		BufferedReader br = null;
-		String indicatorTag = "";
 		
 		try {
 			URL url = new URL(urls[0]);
-			br = new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8));
-			String line = br.readLine();
-			
-			while (line != null) {
-				if (line.contains("id=") && line.toLowerCase().contains(urls[1].toLowerCase())){
-					System.out.println(line.toLowerCase());
-					System.out.println(urls[1]);
-					int indexOfID = line.indexOf("id=");
-					int indexOfFirstQuote = line.indexOf("\"", indexOfID);
-					int indexOfSecondQuote = line.indexOf("\"", indexOfFirstQuote + 1);
-					indicatorTag = line.substring(indexOfFirstQuote + 1, indexOfSecondQuote);
-					return "#" + indicatorTag;
+			Document doc = Jsoup.parse(url, 5000);
+			Elements spans = doc.select("span");
+			for (Element span : spans) {
+				String id = span.attr("id").toLowerCase();
+				if (id.contains(urls[1].toLowerCase())) {
+					return "#" + id;
 				}
-				
-				line = br.readLine();
 			}
-			return indicatorTag;
+			return "";
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return indicatorTag;
+		return "";
 	}
 
 	public void executed(boolean sucess, MessageReceivedEvent event) {
