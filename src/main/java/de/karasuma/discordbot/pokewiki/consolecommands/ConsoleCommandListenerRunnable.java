@@ -1,9 +1,9 @@
-package de.karasuma.discordbot.conannews.consolecommands;
+package de.karasuma.discordbot.pokewiki.consolecommands;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import de.karasuma.discordbot.conannews.DiscordBot;
-import de.karasuma.discordbot.conannews.Main;
+import de.karasuma.discordbot.pokewiki.DiscordBot;
+import de.karasuma.discordbot.pokewiki.Main;
 
 public class ConsoleCommandListenerRunnable implements Runnable {
 	

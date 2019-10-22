@@ -1,5 +1,5 @@
-package de.karasuma.discordbot.conannews.consolecommands;
-import de.karasuma.discordbot.conannews.DiscordBot;
+package de.karasuma.discordbot.pokewiki.consolecommands;
+import de.karasuma.discordbot.pokewiki.DiscordBot;
 import net.dv8tion.jda.api.entities.Activity;
 
 public class ConsoleCommandUpdateActivityType implements ConsoleCommand {

@@ -1,4 +1,4 @@
-package de.karasuma.discordbot.conannews.commandhandling;
+package de.karasuma.discordbot.pokewiki.commandhandling;
 import java.util.HashMap;
 
 public class CommandHandler {

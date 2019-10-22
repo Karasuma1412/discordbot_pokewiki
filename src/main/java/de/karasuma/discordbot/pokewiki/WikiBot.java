@@ -1,10 +1,10 @@
-package de.karasuma.discordbot.conannews;
+package de.karasuma.discordbot.pokewiki;
 
 import java.util.HashMap;
 
-import de.karasuma.discordbot.conannews.commandhandling.CommandHandler;
-import de.karasuma.discordbot.conannews.commandhandling.CommandListener;
-import de.karasuma.discordbot.conannews.consolecommands.*;
+import de.karasuma.discordbot.pokewiki.commandhandling.CommandHandler;
+import de.karasuma.discordbot.pokewiki.commandhandling.CommandListener;
+import de.karasuma.discordbot.pokewiki.consolecommands.*;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -20,7 +20,7 @@ public class WikiBot extends DiscordBot{
 	@Override
 	public void init() {
 		setBuilder(new JDABuilder(AccountType.BOT));
-		getBuilder().setToken(Token.TOKEN_TEST);
+		getBuilder().setToken(Token.TOKEN_PRODUCTION);
 		getBuilder().setAutoReconnect(true);
 		getBuilder().addEventListeners(new CommandListener());
 

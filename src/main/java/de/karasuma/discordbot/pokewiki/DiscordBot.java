@@ -1,10 +1,10 @@
-package de.karasuma.discordbot.conannews;
+package de.karasuma.discordbot.pokewiki;
 
 import java.util.HashMap;
 
 import javax.security.auth.login.LoginException;
 
-import de.karasuma.discordbot.conannews.consolecommands.ConsoleCommand;
+import de.karasuma.discordbot.pokewiki.consolecommands.ConsoleCommand;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;

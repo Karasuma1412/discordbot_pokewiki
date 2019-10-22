@@ -1,4 +1,4 @@
-package de.karasuma.discordbot.conannews.commandhandling;
+package de.karasuma.discordbot.pokewiki.commandhandling;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 

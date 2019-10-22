@@ -1,4 +1,4 @@
-package de.karasuma.discordbot.conannews.consolecommands;
+package de.karasuma.discordbot.pokewiki.consolecommands;
 import java.util.HashMap;
 import java.util.Map.Entry;
 

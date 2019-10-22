@@ -1,6 +1,6 @@
-package de.karasuma.discordbot.conannews.consolecommands;
+package de.karasuma.discordbot.pokewiki.consolecommands;
 
-import de.karasuma.discordbot.conannews.DiscordBot;
+import de.karasuma.discordbot.pokewiki.DiscordBot;
 
 public class ConsoleCommandStatus implements ConsoleCommand {
 

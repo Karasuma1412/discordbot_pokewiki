@@ -1,4 +1,4 @@
-package de.karasuma.discordbot.conannews;
+package de.karasuma.discordbot.pokewiki;
 
 
 import java.io.File;

@@ -1,7 +1,7 @@
-package de.karasuma.discordbot.conannews;
+package de.karasuma.discordbot.pokewiki;
 import java.util.HashMap;
 
-import de.karasuma.discordbot.conannews.consolecommands.ConsoleCommandListenerRunnable;
+import de.karasuma.discordbot.pokewiki.consolecommands.ConsoleCommandListenerRunnable;
 
 public class Main {
 	

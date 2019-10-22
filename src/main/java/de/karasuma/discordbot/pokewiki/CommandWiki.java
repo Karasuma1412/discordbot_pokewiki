@@ -1,6 +1,6 @@
-package de.karasuma.discordbot.conannews;
+package de.karasuma.discordbot.pokewiki;
 
-import de.karasuma.discordbot.conannews.commandhandling.Command;
+import de.karasuma.discordbot.pokewiki.commandhandling.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
