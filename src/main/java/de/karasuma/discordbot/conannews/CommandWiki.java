@@ -61,8 +61,8 @@ public class CommandWiki implements Command {
 			Document doc = Jsoup.parse(url, 5000);
 			Elements spans = doc.select("span");
 			for (Element span : spans) {
-				String id = span.attr("id").toLowerCase();
-				if (id.contains(urls[1].toLowerCase())) {
+				String id = span.attr("id");
+				if (id.toLowerCase().contains(urls[1].toLowerCase())) {
 					return "#" + id;
 				}
 			}
